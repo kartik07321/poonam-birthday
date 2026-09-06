@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Poonam ❤️</title>
+
+  <meta name="description" content="A special birthday surprise for Poonam ❤️">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #07030a;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ---------- BACKGROUND ---------- */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 61, 164, .18), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(155, 70, 255, .16), transparent 32%),
+        radial-gradient(circle at 50% 90%, rgba(255, 105, 180, .12), transparent 30%);
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,160,220,.6) 1px, transparent 1px);
+      background-size: 95px 95px, 150px 150px;
+      background-position: 10px 20px, 50px 80px;
+      opacity: .35;
+      animation: starMove 18s linear infinite;
+    }
+
+    @keyframes starMove {
+      from { transform: translateY(0); }
+      to { transform: translateY(95px); }
+    }
+
+    /* ---------- NAVBAR ---------- */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(5,2,8,.85), transparent);
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffb3dc;
+    }
+
+    .logo span {
+      color: #ff4eae;
+    }
+
+    .music-btn {
+      border: 1px solid rgba(255,105,190,.6);
+      background: rgba(255,65,170,.08);
+      color: white;
+      padding: 10px 17px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .music-btn:hover {
+      background: rgba(255,65,170,.22);
+      box-shadow: 0 0 25px rgba(255,65,170,.35);
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 7% 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .small-title {
+      font-family: 'Great Vibes', cursive;
+      color: #ff87c8;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      color: #ddd;
+      line-height: 1.8;
+      font-size: 16px;
+      max-width: 560px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(65px, 8vw, 115px);
+      line-height: .95;
+      font-weight: 400;
+      color: #fff;
+      text-shadow:
+        0 0 12px rgba(255,255,255,.3),
+        0 0 45px rgba(255,50,170,.45);
+    }
+
+    .hero h2 {
+      font-size: clamp(38px, 5vw, 65px);
+      letter-spacing: 7px;
+      color: #ff76c2;
+      margin: 12px 0;
+      text-shadow: 0 0 25px rgba(255,50,170,.5);
+    }
+
+    .nicknames {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 23px;
+      color: #ddd;
+      margin: 20px 0 35px;
+    }
+
+    .nicknames span {
+      color: #ff81c7;
+      margin: 0 7px;
+    }
+
+    .surprise-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: none;
+      padding: 17px 30px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ff3d9f, #ff8acb);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow:
+        0 0 15px rgba(255,61,159,.5),
+        0 0 45px rgba(255,61,159,.25);
+      transition: .3s;
+    }
+
+    .surprise-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    /* ---------- HERO IMAGE ---------- */
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .photo-frame {
+      width: min(470px, 90vw);
+      aspect-ratio: 4 / 5;
+      padding: 8px;
+      border-radius: 250px 250px 30px 30px;
+      background: linear-gradient(145deg, #ff7ac7, #54205d, #ff3ca4);
+      box-shadow:
+        0 0 35px rgba(255,70,175,.3),
+        0 0 100px rgba(150,50,255,.15);
+      transform: rotate(2deg);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 240px 240px 25px 25px;
+      display: block;
+    }
+
+    /* ---------- SECTIONS ---------- */
+
+    section {
+      padding: 110px 7%;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: #ff76c2;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .section-title h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 62px;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+
+    /* ---------- GALLERY ---------- */
+
+    .gallery {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid rgba(255,120,200,.25);
+      background: #120812;
+      min-height: 310px;
+      position: relative;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+      transform: translateY(35px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 310px;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ---------- NOTE ---------- */
+
+    .note-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 55px 45px;
+      border: 1px solid rgba(255,115,190,.3);
+      border-radius: 28px;
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 70px rgba(255,40,160,.08);
+      position: relative;
+    }
+
+    .note-box::before {
+      content: "“";
+      position: absolute;
+      top: 5px;
+      left: 25px;
+      font-family: Georgia, serif;
+      font-size: 100px;
+      color: rgba(255,100,190,.18);
+    }
+
+    .note-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      line-height: 1.75;
+      color: #eee;
+      text-align: center;
+    }
+
+    .signature {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      color: #ff86ca;
+      font-size: 35px;
+    }
+
+    /* ---------- SPECIAL ---------- */
+
+    .special {
+      text-align: center;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .big-heart {
+      font-size: 75px;
+      animation: heartbeat 1.5s infinite;
+      filter: drop-shadow(0 0 20px #ff3da7);
+    }
+
+    @keyframes heartbeat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    .special h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(55px, 8vw, 95px);
+      color: #ff9ad3;
+      font-weight: 400;
+      margin: 15px 0;
+    }
+
+    .special p {
+      max-width: 650px;
+      color: #ddd;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      line-height: 1.6;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      text-align: center;
+      padding: 50px 20px 70px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      color: #999;
+    }
+
+    footer strong {
+      display: block;
+      color: #ff83c8;
+      font-family: 'Great Vibes', cursive;
+      font-size: 34px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- FLOATING HEARTS ---------- */
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      pointer-events: none;
+      animation: floatHeart linear forwards;
+      z-index: 90;
+      opacity: .8;
+    }
+
+    @keyframes floatHeart {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      15% { opacity: .8; }
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ---------- CONFETTI ---------- */
+
+    .confetti {
+      position: fixed;
+      width: 9px;
+      height: 14px;
+      top: -20px;
+      z-index: 999;
+      pointer-events: none;
+      animation: fall 3s linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .music-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero-content {
+        margin: auto;
+      }
+
+      .intro {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .small-title {
+        font-size: 32px;
+      }
+
+      .nicknames {
+        font-size: 20px;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .photo-frame {
+        width: min(330px, 88vw);
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item {
+        min-height: 240px;
+      }
+
+      .gallery-item img {
+        min-height: 240px;
+      }
+
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(5) {
+        transform: none;
+      }
+
+      .note-box {
+        padding: 40px 22px;
+      }
+
+      .note-box p {
+        font-size: 21px;
+      }
+
+      section {
+        padding: 80px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 52px;
+      }
+
+      .special p {
+        font-size: 21px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item img {
+        min-height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stars"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">For Poonam <span>♥</span></div>
+
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+      🎵 Play Music
+    </button>
+  </nav>
+
+
+  <!-- MUSIC
+       Rename your music file to music.mp3
+       and upload it in the same folder as index.html.
+  -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- HERO -->
+  <main class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Hey Poonam... ♡
+      </div>
+
+      <p class="intro">
+        Aaj tumhare liye kuch chhota-sa banaya hai...
+        Lekin shayad tumhare liye thoda special hai. ❤️
+      </p>
+
+      <h1>Happy Birthday</h1>
+
+      <h2>POONAM</h2>
+
+      <div class="nicknames">
+        Poonam <span>•</span>
+        Meri Poornima <span>•</span>
+        Meri Cherkor
+      </div>
+
+      <button class="surprise-btn" onclick="openSurprise()">
+        🎁 OPEN YOUR SURPRISE →
+      </button>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+      <div class="photo-frame">
+
+        <!-- MAIN PHOTO -->
+        <img src="photo1.jpg" alt="Poonam">
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- GALLERY -->
+  <section id="gallery">
+
+    <div class="section-title">
+      <small>A few beautiful moments</small>
+      <h2>Just You ✨</h2>
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <img src="photo1.jpg" alt="Poonam">
+      </div>
+
+      <div class="gallery-item">
+        <img src="photo2.jpg" alt="Poonam">
+      </div>
+
+      <div class="gallery-item">
+        <img src="photo3.jpg" alt="Poonam">
+      </div>
+
+      <div class="gallery-item">
+        <img src="photo4.jpg" alt="Poonam">
+      </div>
+
+      <div class="gallery-item">
+        <img src="photo5.jpg" alt="Poonam">
+      </div>
+
+      <div class="gallery-item">
+        <img src="photo6.jpg" alt="Poonam">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PERSONAL NOTE -->
+  <section id="note">
+
+    <div class="section-title">
+      <small>A little something from me</small>
+      <h2>For You, Poonam 💌</h2>
+    </div>
+
+    <div class="note-box">
+
+      <p>
+        Kuch log life mein bas ek insaan bankar nahi aate,
+        woh dheere-dheere apni ek alag si jagah bana lete hain.
+        <br><br>
+
+        Poonam, tum unhi special logon mein se ho.
+        Poonam bolo, Poornima bolo ya meri kabhi-kabhi wali
+        <b>Cherkor</b> 😂❤️ —
+        naam kuch bhi ho, tumhari smile aur tumhari presence
+        hamesha thodi alag feel hoti hai.
+        <br><br>
+
+        Bas aaj ke din meri wish itni si hai ki tumhari life
+        mein happiness kabhi kam na ho.
+        Jo dreams tum dekhti ho, woh poore hon.
+        Jo smile tumhare face par hai, woh hamesha rahe.
+        Aur tumhe hamesha woh log milen jo tumhari value samjhein.
+        <br><br>
+
+        You deserve beautiful things,
+        beautiful moments and a whole lot of happiness.
+        <br><br>
+
+        So today, forget everything else...
+        बस smile करो, enjoy करो और अपना दिन पूरी तरह से जीयो.
+        क्योंकि आज का दिन तुम्हारा है. ❤️
+      </p>
+
+      <div class="signature">
+        Happy Birthday, Poonam ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SPECIAL MESSAGE -->
+  <section class="special">
+
+    <div class="big-heart">💗</div>
+
+    <h2>Keep Smiling...</h2>
+
+    <p>
+      Some people make life a little more beautiful
+      just by being a part of it.
+      <br>
+      And Poonam, you are one of them. ✨
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <strong>Made with lots of love ♡</strong>
+
+    <p>
+      For the one who deserves all the happiness in the world.
+    </p>
+
+    <p style="margin-top:20px;">
+      © A little birthday surprise for Poonam 🎂
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    /* ---------- SURPRISE BUTTON ---------- */
+
+    function openSurprise() {
+
+      document.getElementById("gallery").scrollIntoView({
+        behavior: "smooth"
+      });
+
+      createConfetti();
+
+      setTimeout(() => {
+        createConfetti();
+      }, 700);
+    }
+
+
+    /* ---------- MUSIC ---------- */
+
+    const music = document.getElementById("music");
+    const musicBtn = document.getElementById("musicBtn");
+
+    function toggleMusic() {
+
+      if (music.paused) {
+
+        music.play()
+          .then(() => {
+            musicBtn.innerHTML = "⏸ Pause Music";
+          })
+          .catch(() => {
+            alert("Please upload music.mp3 in the repository first.");
+          });
+
+      } else {
+
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Music";
+
+      }
+    }
+
+
+    /* ---------- FLOATING HEARTS ---------- */
+
+    function createHeart() {
+
+      const heart = document.createElement("div");
+
+      heart.className = "heart";
+
+      const hearts = ["♥", "♡", "💗", "💖", "✨"];
+
+      heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (12 + Math.random() * 20) + "px";
+
+      heart.style.animationDuration =
+        (5 + Math.random() * 6) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 11000);
+    }
+
+    setInterval(createHeart, 900);
+
+
+    /* ---------- CONFETTI ---------- */
+
+    function createConfetti() {
+
+      const symbols = ["♥", "✦", "✧", "●", "◆"];
+
+      for (let i = 0; i < 90; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.innerHTML =
+          symbols[Math.floor(Math.random() * symbols.length)];
+
+        piece.style.left =
+          Math.random() * 100 + "vw";
+
+        piece.style.fontSize =
+          (8 + Math.random() * 12) + "px";
+
+        piece.style.animationDuration =
+          (2 + Math.random() * 3) + "s";
+
+        piece.style.animationDelay =
+          Math.random() * .8 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+          piece.remove();
+        }, 5000);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
